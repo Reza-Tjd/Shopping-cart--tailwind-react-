@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import MainBody from "./Components/MainBody/MainBody";
 import Cart from "./Components/ShoppingCart/Cart";
 import Footer from "./Components/Footer/Footer";
+import Social from "./Components/Social";
 
 export default function App() {
   const dataCenter = [
@@ -12,6 +13,12 @@ export default function App() {
     { id: 4, title: "Album-4", price: "$35" },
     { id: 5, title: "Album-5", price: "$45" },
     { id: 6, title: "Album-6", price: "$55" },
+  ];
+
+  const socialCenter = [
+    { src: "/images/Youtube.png", className: "w-5" },
+    { src: "/images/Spotify.png", className: "w-5" },
+    { src: "/public/images/Facebook.png", className: "w-5" },
   ];
 
   const [adding, setAdding] = useState([]);
@@ -40,7 +47,7 @@ export default function App() {
         deleteItem={deleteItem}
         cleanItems={cleanItems}
       ></Cart>
-      <Footer></Footer>
+      <Footer social={socialCenter}></Footer>
     </div>
   );
 }
